@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "GRPC_Consumer.Protos";
+
+package example;
+
+// The greeting service definition.
+service Examples {
+  // Sends a greeting
+  rpc GetText (RequestExample) returns (ResponseExample);
+}
+
+// The request message containing the user's name.
+message RequestExample {
+  string text = 1;
+}
+
+// The response message containing the greetings.
+message ResponseExample {
+  string text = 1;
+}
